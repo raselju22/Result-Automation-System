@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="common/header :: common-header" />
+<head th:replace="common/header :: navbar" />
+<body>
+
+
+
+
+
+
+	<div class="container-wrapper">
+
+		<div class="container">
+
+			<div class="page-header">
+				<h1>Administrator Page</h1>
+
+				<p class="lead">This is a administrator page!</p>
+			</div>
+
+
+
+
+			
+
+
+			<br /> <br />
+
+			<h3>
+				<a th:href="@{/admin/panel/addTeacher}">Add New Teacher</a>
+			</h3>
+			<p>Here you can add new Teacher</p>
+
+
+
+			<br /> <br />
+
+
+
+
+
+
+			
+
+
+
+
+		</div>
+
+	</div>
+
+
+
+
+	<div th:replace="common/header :: body-bottom-scripts" />
+
+</body>
+</html>

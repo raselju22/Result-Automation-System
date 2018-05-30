@@ -1,0 +1,84 @@
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="common/header :: common-header" />
+
+<head th:replace="common/header :: navbar" />
+
+
+
+<body>
+
+
+
+
+
+
+
+	<div class="container-wrapper">
+
+		<div class="container">
+
+			<div class="row">
+				<div class="jumbotron col-md-12">
+					<h1>Demo Online Shop</h1>
+					<p>Top 5 Profitable Product</p>
+
+				</div>
+			</div>
+
+
+
+
+			<table class="table table-striped table-hover table-bordered">
+
+				<thead>
+					<tr class="bg-success">
+
+						<th>Product Name</th>
+						<th>Category</th>
+						<th>Profit Percentage</th>
+						<th>Price</th>
+						<th colspan="2">Operations</th>
+					</tr>
+
+				</thead>
+
+				<tr data-th-each="product: ${products}">
+					<td th:text="${product.name}">0</td>
+					<td data-th-text="${product.productType}">...</td>
+					<td data-th-text="${product.profitPercentage}+'%'">...</td>
+					<td data-th-text="${product.price}+' USD'">...</td>
+
+					<td><a
+						th:href="@{/admin/panel/deleteProduct(id=${product.id})}"
+						class="btn btn-info btn-lg">Delete</a></td>
+					<td><a
+						th:href="@{/admin/panel/updateProduct(id=${product.id})}"
+						class="btn btn-info btn-lg">Update</a></td>
+
+				</tr>
+
+
+			</table>
+
+
+
+			<div>
+				<p>Number of Products Sold :0</p>
+
+			</div>
+
+
+
+		</div>
+	</div>
+
+</body>
+
+
+
+
+
+</html>
